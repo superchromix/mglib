@@ -228,7 +228,7 @@ pro mg_h5_getdata_computeslab, bounds, $
   start = reform(bounds[*, 0])
   stride = reform(bounds[*, 2])
 
-  count = ceil((bounds[*, 1] - bounds[*, 0] + 1L) / float(bounds[*, 2]), l64=size(bounds, /type) gt 11) > 1
+  count = ceil((bounds[*, 1] - bounds[*, 0] + 1L) / double(bounds[*, 2]), l64=size(bounds, /type) gt 11) > 1
   block = lonarr(ndims) + 1L
 end
 
